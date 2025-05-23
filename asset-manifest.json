@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sport-evo/static/css/main.70ef5b8c.css",
+    "main.js": "/sport-evo/static/js/main.b33a6fc6.js",
+    "static/js/453.8ab44547.chunk.js": "/sport-evo/static/js/453.8ab44547.chunk.js",
+    "index.html": "/sport-evo/index.html",
+    "main.70ef5b8c.css.map": "/sport-evo/static/css/main.70ef5b8c.css.map",
+    "main.b33a6fc6.js.map": "/sport-evo/static/js/main.b33a6fc6.js.map",
+    "453.8ab44547.chunk.js.map": "/sport-evo/static/js/453.8ab44547.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.70ef5b8c.css",
+    "static/js/main.b33a6fc6.js"
+  ]
+}
