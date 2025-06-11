@@ -235,7 +235,7 @@ function App() {
 
   const tgData = useLaunchParams();
   const getUserName = () => {
-    return `${tgData?.tgWebAppData?.user?.username}: ${tgData?.tgWebAppData?.user?.first_name} ${tgData?.tgWebAppData?.user?.last_name}`.trim();
+    return `@${tgData?.tgWebAppData?.user?.username}: ${tgData?.tgWebAppData?.user?.first_name} ${tgData?.tgWebAppData?.user?.last_name}`.trim();
   };
   // const userStr = "@test: Test Testovich";
   const userStr = getUserName();
