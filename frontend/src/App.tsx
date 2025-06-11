@@ -233,11 +233,12 @@ function App() {
   };
   console.log(pulseData);
 
-  // const tgData = useLaunchParams();
-  // const getUserName = () => {
-  //   return `${tgData?.tgWebAppData?.user?.username}: ${tgData?.tgWebAppData?.user?.first_name} ${tgData?.tgWebAppData?.user?.last_name}`.trim();
-  // };
-  const userStr = "@test: Test Testovich";
+  const tgData = useLaunchParams();
+  const getUserName = () => {
+    return `${tgData?.tgWebAppData?.user?.username}: ${tgData?.tgWebAppData?.user?.first_name} ${tgData?.tgWebAppData?.user?.last_name}`.trim();
+  };
+  // const userStr = "@test: Test Testovich";
+  const userStr = getUserName();
   const location = useLocation();
   const achievements: Array<IAchievementData> = [
     {
@@ -331,7 +332,7 @@ function App() {
   ];
 
   return (
-    <div className="App">
+    <div className="App main-style">
       <Navbar openedPageTitle={getPageTitle(location.pathname, toOneLayer(menuItems))} menuItems={menuItems} userStr={userStr}/>
       <Routes>
         <Route index element={<EmptyPage/>}/>

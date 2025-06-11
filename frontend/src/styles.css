@@ -152,6 +152,9 @@
   margin: 20px;
   /* min-height: 200px; */
 }
-.App {
+.main {
+  background-color: white;
+}
+.main-style {
   background-color: white;
 }
