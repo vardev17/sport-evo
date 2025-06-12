@@ -8,6 +8,7 @@
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^7.1.1",
     "@mui/x-charts": "^8.5.1",
+    "@mui/x-date-pickers": "^8.5.1",
     "@telegram-apps/sdk-react": "^3.2.4",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -17,6 +18,7 @@
     "@types/node": "^16.18.126",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.5",
+    "dayjs": "^1.11.13",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.0",
@@ -31,9 +33,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "eslintConfig": {
-
-  },
+  "eslintConfig": {},
   "browserslist": {
     "production": [
       ">0.2%",

@@ -13,7 +13,7 @@ import { FeedbackPage } from "./pages/communication/feedback";
 import { ChatPage } from "./pages/communication/chat";
 import { NotificationsPage, INotification } from "./pages/communication/notifications";
 import { BigSportEventsPage } from "./pages/digest/big_sport_events";
-import { SportEventsSchedulePage } from "./pages/digest/sports_events_schedule";
+import { SportEventsSchedulePage, IEventItem } from "./pages/digest/sports_events_schedule";
 import { SportsNewsPage } from "./pages/digest/sports_news";
 import { AchievementsPage, IAchievementData, Intencity, Mood } from "./pages/my_sport/achievements";
 import { ActivityPage, IChartValuesInputData } from "./pages/my_sport/activity";
@@ -237,8 +237,8 @@ function App() {
   const getUserName = () => {
     return `@${tgData?.tgWebAppData?.user?.username}: ${tgData?.tgWebAppData?.user?.first_name} ${tgData?.tgWebAppData?.user?.last_name}`.trim();
   };
-  // const userStr = "@test: Test Testovich";
   const userStr = getUserName();
+  // const userStr = "@test: Test Testovich";
   const location = useLocation();
   const achievements: Array<IAchievementData> = [
     {
@@ -330,6 +330,24 @@ function App() {
       date: new Date((new Date()).getTime() - 10 * oneDayTS),
     }
   ];
+  const sportEvents: Array<IEventItem> = [
+    {
+      title: "Чемпионат Мира по футболу 2025",
+      description: "Самый масштабный футбольный турнир, проходящий в США, Канаде и Мексике",
+      sportType: "Футбол",
+      link: "sports.ru",
+      date: new Date(new Date().getTime() - 3 * oneDayTS),
+      dateEnd: new Date(new Date().getTime() - 1 * oneDayTS),
+    },
+    {
+      title: "Футбольный матч",
+      description: "Стадион лужники, футбольный матч динамо",
+      sportType: "Футбол",
+      link: "sports.ru",
+      date: new Date(new Date().getTime() - 5 * oneDayTS),
+      // dateEnd: new Date(new Date().getTime() - 3 * oneDayTS),
+    },
+  ];
 
   return (
     <div className="App main-style">
@@ -340,7 +358,7 @@ function App() {
         <Route path="/my-sport/my-activity" element={<ActivityPage pulseData={pulseData} weightData={weightData} stepsData={stepsData}/>}/>
         <Route path="/my-sport/my-achievements" element={<AchievementsPage data={achievements}/>}/>
 
-        <Route path="/digest/sport-event-schedule" element={<SportEventsSchedulePage/>}/>
+        <Route path="/digest/sport-event-schedule" element={<SportEventsSchedulePage data={sportEvents}/>}/>
         <Route path="/digest/big-sport-events" element={<BigSportEventsPage/>}/>
         <Route path="/digest/sports-news" element={<SportsNewsPage/>}/>
 
