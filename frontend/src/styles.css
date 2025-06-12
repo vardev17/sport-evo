@@ -167,8 +167,8 @@
   border: 4px solid var(--tg-theme-secondary-bg-color, #1e78df);
   display: block;
 }
-.event-calendar-dialog {
+/* .event-calendar-dialog {
   border-radius: 18px;
   border: 4px solid var(--tg-theme-secondary-bg-color, #1e78df);
 
-}
+} */
